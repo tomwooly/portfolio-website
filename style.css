@@ -7,14 +7,36 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: -apple-system, sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+/* Fonts code */
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/Lastica.ttf') format('truetype'), /* Modern browsers */
+         url('fonts/Lastica.ttf') format('truetype'); /* Fallback for older browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SecondaryFont';
+    src: url('fonts/TT\ Interphases\ Pro\ Trial\ ExtraLight.ttf') format('truetype'), /* Main font */
+         url('fonts/TT\ Interphases\ Pro\ Trial\ ExtraLight.ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.secondary-font {
+    font-family: 'SecondaryFont', sans-serif;
 }
 
 :root {
     --bg-color: #001;
-    --second-bg-color: #112;
+    --second-bg-color: #1c1330;
     --text-color: #fff;
-    --main-color: #16ff00;
+    --main-color: #3ddaa8;
 }
 
 html {
@@ -53,7 +75,7 @@ header {
     font-size: 3rem;
     font-weight: 800;
     cursor: pointer;
-    background: -webkit-linear-gradient(#16ff00, #ffed00);
+    background: -webkit-linear-gradient(#4533ad, #b625c8);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -129,7 +151,7 @@ span {
     font-size: 5.8rem;
     font-weight: 700;
     line-height: 1.3;
-    background: -webkit-linear-gradient(#16ff00, #ffed00);
+    background: -webkit-linear-gradient(#4533ad, #b625c8);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -254,15 +276,16 @@ span {
 /* Portfolio section code */
 
 .portfolio{
-    background: var(--bg-color);
+    background: var(--second-bg-color);
 }
 
 .portfolio-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    align-items: center;
-    gap: 2.3rem;
-    margin-top: 4.2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Set to 4 equal-width columns */
+        align-items: center;
+        gap: 2.3rem;
+        margin-top: 4.2rem;
+    
 }
 
 .row {
@@ -500,4 +523,97 @@ span {
         margin: 2rem 0;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .portfolio-content {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .portfolio-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio-content {
+        grid-template-columns: 1fr; /* 1 column on small screens (mobile) */
+    }
+}
+
+/* Python Portfolio Code */
+
+
+.python-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    justify-content: center; 
+    gap: 2.3rem;
+    padding: 40px; 
+    height: 100vh; 
+    align-items: center; 
+}
+
+.projectrow {
+    background: var(--second-bg-color);
+    border-radius: 28px;
+    border: 1px solid;
+    box-shadow: 0 0 5px var(--main-color);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+
+.projectrow:hover {
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.03);
+    cursor: pointer;
+}
+
+
+.projectrow img {
+    height: auto;
+    width: 100px;
+    border-radius: 28px;
+    margin-bottom: 1.4rem;
+}
+
+
+.p-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+
+.projectrow h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+
+.project-icon i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    font-size: 27px;
+    border-radius: 50%;
+    color: var(--text-color);
+    background: #075fe4;
+}
+
+
+.projectrow h4 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+
 
