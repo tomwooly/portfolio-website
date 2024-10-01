@@ -14,8 +14,8 @@
 
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('fonts/Lastica.ttf') format('truetype'), /* Modern browsers */
-         url('fonts/Lastica.ttf') format('truetype'); /* Fallback for older browsers */
+    src: url('fonts/Lastica.ttf') format('truetype'), 
+         url('fonts/Lastica.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -23,7 +23,7 @@
 @font-face {
     font-family: 'SecondaryFont';
     src: url('fonts/TT\ Interphases\ Pro\ Trial\ ExtraLight.ttf') format('truetype'), /* Main font */
-         url('fonts/TT\ Interphases\ Pro\ Trial\ ExtraLight.ttf') format('truetype'); /* Fallback */
+         url('fonts/TT\ Interphases\ Pro\ Trial\ ExtraLight.ttf') format('truetype'); /* Back up */
     font-weight: normal;
     font-style: normal;
 }
